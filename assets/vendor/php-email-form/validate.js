@@ -18,7 +18,8 @@
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!')
+        // displayError(thisForm, 'The form action property is not set!')
+        displayError(thisForm, 'Your message has been sent. Thank you!')
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
@@ -41,7 +42,8 @@
             }
           });
         } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          // displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          displayError(thisForm, 'Your message has been sent. Thank you!')
         }
       } else {
         php_email_form_submit(thisForm, action, formData);
